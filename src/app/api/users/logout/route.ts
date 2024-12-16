@@ -1,5 +1,5 @@
-import {NextRequest, NextResponse} from 'next/server'
-import { connect } from "http2";
+import {NextResponse} from 'next/server'
+import { connect } from "@/db/db.connect";
 
 
 connect()
