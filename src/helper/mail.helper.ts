@@ -25,14 +25,14 @@ export const sendEmail = async ({email, emailType, userId}:any)=>{
               pass: "0440da083259ef"
             }
           });
-          const mailOptions = {
-            from: 'likhithpalya@gmail.com',
-            to: email, // list of receivers
-            subject: emailType == 'VERIFY' ? "Verify your email":"Reset your password", // Subject line
-            text: "", // plain text body
-            html: `<p>Click ,a href="${process.env.DOMAIN}/verifyemail?token=${hashedToken}">here</a> to ${emailType == "VERIFY" ? "verify your email" : "reset your password"} or copy paste the link below in your browser.<br> ${process.env.DOMAIN}/verifyemail?token=${hashedToken} </p>`,
-            
-          }
+           const mailOptions = {
+            from: 'palya@gmail.com',
+            to: email,
+            subject: emailType === "VERIFY" ? "Verify your email" : "Reset your password",
+            html: `<p>Click <a href="${process.env.DOMAIN}/verifyemail?token=${hashedToken}">here</a> to ${emailType === "VERIFY" ? "verify your email" : "reset your password"}
+            or copy and paste the link below in your browser. <br> ${process.env.DOMAIN}/verifyemail?token=${hashedToken}
+            </p>`
+        }
           const mailResponse = await transport.sendMail(mailOptions)
           return mailResponse
     } catch (error:any) {
