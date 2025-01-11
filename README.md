@@ -57,8 +57,8 @@ A comprehensive Next.js authentication application with MongoDB integration, JWT
 
    ```env
    MONGO_URI=<your_mongodb_connection_string>
-   JWT_SECRET=<your_jwt_secret>
-   BASE_URL=http://localhost:3000
+   TOKEN_SECRET=<your_jwt_secret>
+   DOMAIN=http://localhost:3000
    ```
 
 4. Start the development server:
@@ -122,19 +122,6 @@ A comprehensive Next.js authentication application with MongoDB integration, JWT
 
 ---
 
-## Screenshots
-
-### Signup Page
-![Signup Page](https://via.placeholder.com/800x400?text=Signup+Page)
-
-### Login Page
-![Login Page](https://via.placeholder.com/800x400?text=Login+Page)
-
-### Profile Page
-![Profile Page](https://via.placeholder.com/800x400?text=Profile+Page)
-
----
-
 ## Future Enhancements
 
 - Add OAuth support for third-party providers (Google, Facebook, etc.).
@@ -166,4 +153,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - Author: **Likhith Palya**  
 - GitHub: [https://github.com/LikhithPalya](https://github.com/LikhithPalya)
 
-Feel free to customize this further! Let me know if you'd like to add more sections.
