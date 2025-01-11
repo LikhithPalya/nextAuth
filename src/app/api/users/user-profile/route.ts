@@ -5,7 +5,7 @@ import User from "@/models/user.model";
 
 connect()
 
-export async function(request: NextRequest){
+export async function GET(request: NextRequest){
     //extract data from request
     const userId = await getDataFromToken(request)
     const user = await User.findById(userId).select("-password")
